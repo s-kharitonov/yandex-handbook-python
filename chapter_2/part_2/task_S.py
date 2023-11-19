@@ -21,7 +21,7 @@
 x = float(input())
 y = float(input())
 
-if x > 10 or x < -10 or y > 10 or y < -10:
+if x * x + y * y > 100:
     print('Вы вышли в море и рискуете быть съеденным акулой!')
 elif x >= 0 and y >= 0 and x * x + y * y <= 25:
     print('Опасность! Покиньте зону как можно скорее!')
