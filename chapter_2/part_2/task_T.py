@@ -27,3 +27,4 @@ elif 'зайка' in mid_line.lower():
     print(f'{mid_line} {len(mid_line)}')
 else:
     print(f'{max_line} {len(max_line)}')
+    
