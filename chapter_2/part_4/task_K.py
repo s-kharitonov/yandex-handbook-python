@@ -16,8 +16,8 @@ for i in range(numbers_count):
     if number <= 1:
         continue
 
-    for i in range(2, int(number ** 0.5) + 1):
-        if number % i == 0:
+    for j in range(2, int(number ** 0.5) + 1):
+        if number % j == 0:
             break
     else:
         prime_numbers_count += 1
