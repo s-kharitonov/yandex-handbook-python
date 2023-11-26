@@ -14,11 +14,7 @@ width = int(input())
 max_number_digits_count = len(str(height * width))
 
 for i in range(1, height + 1):
-    row = f'{i:>{max_number_digits_count}} '
-    current_number = i
-
-    for j in range(width - 1):
-        current_number += height
-        row += f'{current_number:>{max_number_digits_count}} '
-
+    row = ''
+    for j in range(i, i + width * height, +height):
+        row += f'{j:>{max_number_digits_count}} '
     print(row, end='\n')
