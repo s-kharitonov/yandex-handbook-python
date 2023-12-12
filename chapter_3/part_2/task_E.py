@@ -12,7 +12,6 @@
 semolina_lovers_count = int(input())
 oatmeal_lovers_count = int(input())
 porridge_lovers = {}
-duplicates_count = 0
 
 for i in range(semolina_lovers_count + oatmeal_lovers_count):
     child = input()
