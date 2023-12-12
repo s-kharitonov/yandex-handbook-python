@@ -11,20 +11,24 @@
 # Если таких не окажется, в строке вывода нужно написать «Таких нет».
 semolina_lovers_count = int(input())
 oatmeal_lovers_count = int(input())
-unique_porridge_lovers = set()
+porridge_lovers = {}
 duplicates_count = 0
 
 for i in range(semolina_lovers_count + oatmeal_lovers_count):
     child = input()
+    favorite_porridge_count = porridge_lovers.get(child, 0)
 
-    if child in unique_porridge_lovers:
-        duplicates_count += 1
-    else:
-        unique_porridge_lovers.add(child)
+    porridge_lovers[child] = favorite_porridge_count + 1
 
-unique_porridge_lovers_count = len(unique_porridge_lovers) - duplicates_count
+children_count_with_1_favorite_porridge = 0
 
-if unique_porridge_lovers_count > 0:
-    print(unique_porridge_lovers_count)
+for child in porridge_lovers:
+    favorite_porridge_count = porridge_lovers[child]
+
+    if favorite_porridge_count == 1:
+        children_count_with_1_favorite_porridge += 1
+
+if children_count_with_1_favorite_porridge > 0:
+    print(children_count_with_1_favorite_porridge)
 else:
     print('Таких нет')
