@@ -14,7 +14,7 @@
 numbers = input().split('; ')
 prime_numbers_by_number = dict()
 
-for i, number in enumerate(numbers):
+for number in numbers:
     first_number = int(number)
 
     for j in range(len(numbers)):
