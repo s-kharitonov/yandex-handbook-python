@@ -14,27 +14,27 @@
 numbers = input().split('; ')
 prime_numbers_by_number = dict()
 
-for number in numbers:
-    first_number = int(number)
+for first_number in numbers:
+    first_int_value = int(first_number)
 
-    for j in range(len(numbers)):
-        second_number = int(numbers[j])
+    for second_number in numbers:
+        second_int_value = int(second_number)
 
-        if first_number == second_number:
+        if first_int_value == second_int_value:
             continue
 
-        max_number = max(first_number, second_number)
-        min_number = min(first_number, second_number)
+        max_number = max(first_int_value, second_int_value)
+        min_number = min(first_int_value, second_int_value)
 
         while (remainder := max_number % min_number) != 0:
             max_number = min_number
             min_number = remainder
 
         if min_number == 1:
-            prime_numbers = prime_numbers_by_number.get(first_number, set())
+            prime_numbers = prime_numbers_by_number.get(first_int_value, set())
 
-            prime_numbers.add(second_number)
-            prime_numbers_by_number[first_number] = prime_numbers
+            prime_numbers.add(second_int_value)
+            prime_numbers_by_number[first_int_value] = prime_numbers
 
 for number in sorted(prime_numbers_by_number.keys()):
     prime_numbers = sorted(prime_numbers_by_number[number])
