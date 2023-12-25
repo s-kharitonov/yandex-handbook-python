@@ -8,6 +8,4 @@
 #
 # Примечание
 # В решении не должно быть ничего, кроме выражения.
-numbers = [1, 2, 3, 4, 5]
-
-print(set(number for number in numbers if number ** 0.5 % 1 == 0))
+set(number for number in numbers if number ** 0.5 % 1 == 0)
