@@ -5,6 +5,4 @@
 #
 # Примечание
 # В решении не должно быть ничего, кроме списочного выражения.
-sentence = 'Ехали медведи на велосипеде'
-
-print([len(word) for word in sentence.split()])
+[len(word) for word in sentence.split()]
